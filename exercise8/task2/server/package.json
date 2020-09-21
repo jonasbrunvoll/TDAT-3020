@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node server/server.js"
+  },
+  "author": "Jonas Brunvoll Larsson",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pbkdf2": "latest"
+  },
+  "devDependencies": {
+    "cors": "^2.8.5"
+  }
+}

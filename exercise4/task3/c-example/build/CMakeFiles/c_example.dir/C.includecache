@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jonasbl/jucipp/c-example/more_functions.c
+more_functions.h
+/home/jonasbl/jucipp/c-example/more_functions.h
+stdio.h
+-
+
+/home/jonasbl/jucipp/c-example/more_functions.h
+

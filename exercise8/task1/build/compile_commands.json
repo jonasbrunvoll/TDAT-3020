@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/Users/jonaslarsson/jucipp/openssl-example/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/opt/openssl/include   -std=c++1y -Wall -Wextra -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -o CMakeFiles/example.dir/example.cpp.o -c /Users/jonaslarsson/jucipp/openssl-example/example.cpp",
+  "file": "/Users/jonaslarsson/jucipp/openssl-example/example.cpp"
+}
+]

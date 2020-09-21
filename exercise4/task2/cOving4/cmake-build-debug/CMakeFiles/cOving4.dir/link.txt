@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/cOving4.dir/main.c.o  -o cOving4 

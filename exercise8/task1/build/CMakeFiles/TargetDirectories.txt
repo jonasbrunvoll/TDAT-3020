@@ -1,0 +1,3 @@
+/Users/jonaslarsson/jucipp/openssl-example/build/CMakeFiles/rebuild_cache.dir
+/Users/jonaslarsson/jucipp/openssl-example/build/CMakeFiles/edit_cache.dir
+/Users/jonaslarsson/jucipp/openssl-example/build/CMakeFiles/example.dir

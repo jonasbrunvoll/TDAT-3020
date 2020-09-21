@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/c__oving4.dir/main.cpp.o  -o c__oving4 

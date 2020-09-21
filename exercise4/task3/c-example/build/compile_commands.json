@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/jonasbl/jucipp/c-example/build",
+  "command": "/usr/bin/cc    -std=c11 -Wall -Wextra   -o CMakeFiles/c_example.dir/main.c.o   -c /home/jonasbl/jucipp/c-example/main.c",
+  "file": "/home/jonasbl/jucipp/c-example/main.c"
+},
+{
+  "directory": "/home/jonasbl/jucipp/c-example/build",
+  "command": "/usr/bin/cc    -std=c11 -Wall -Wextra   -o CMakeFiles/c_example.dir/a_function.c.o   -c /home/jonasbl/jucipp/c-example/a_function.c",
+  "file": "/home/jonasbl/jucipp/c-example/a_function.c"
+},
+{
+  "directory": "/home/jonasbl/jucipp/c-example/build",
+  "command": "/usr/bin/cc    -std=c11 -Wall -Wextra   -o CMakeFiles/c_example.dir/more_functions.c.o   -c /home/jonasbl/jucipp/c-example/more_functions.c",
+  "file": "/home/jonasbl/jucipp/c-example/more_functions.c"
+}
+]
