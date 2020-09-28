@@ -1,0 +1,29 @@
+#!/bin/sh
+
+dns=$1
+
+find_mx_info()
+{
+    echo Finding MX-info
+    lookup=`nslookup -type=mx $dns`
+
+    for address in $lookup
+    do
+        echo heiheieh $address
+    done        
+}
+
+find_txt_info()
+{
+    echo Finding TEXT-info
+    nslookup -type=txt $dns
+}
+
+
+echo Starting script.....
+find_mx_info
+find_txt_info
+echo Ending script.....
+
+
+
