@@ -1,29 +1,95 @@
 #!/bin/sh
 
-dns=$1
+#COLORS
+red=`tput setaf 1`
+green=`tput setaf 2`
+blue=`tput setaf 4`
+reset=`tput sgr0`
+
+#Search domain
+inputDomain=$1
+
+
+find_addresses()
+{           
+    dns=$1
+
+    #Finding Ip4 addresses.
+    ips=`nslookup $1| grep "answer:" -A 50 | grep "Address" | cut -d " " -f2`
+    
+    echo "${green}Found IPv4 addresses: ${reset}"
+    for ip in $ips;
+    do
+        echo Address: $ip
+    done
+    echo ''
+
+    #If any find name with reverse lookup 
+    echo "${green}Reverse lookup${reset}:"
+    for ip in $ips;
+    do
+        reversLookUp=`nslookup $ip | grep 'name'|tr ' ' '\n'|tail -n 1`
+        if ! [[ -z "$reversLookUp" ]];then
+            echo Reverse lookup found: "$reversLookUp"
+        else
+            echo "${red}No reverse record found${reset}"
+        fi  
+    done    
+}
+
+
 
 find_mx_info()
 {
-    echo Finding MX-info
-    lookup=`nslookup -type=mx $dns`
+    dns=$1 
 
-    for address in $lookup
+    #Find all lines whith 'mail exchanger' inside. Divice each line at ' ' and show the mail domain.   
+    dig=`nslookup -type=mx $dns | grep 'mail exchanger'|cut -d' ' -f 5`  
+    
+    echo "${green}Found mailservers:${reset}"
+    for address in $dig;
     do
-        echo heiheieh $address
-    done        
+        echo Mailservers: ${address} 
+    done
 }
 
 find_txt_info()
 {
-    echo Finding TEXT-info
-    nslookup -type=txt $dns
+    dns=$1
+       SPF=`nslookup -type=txt $dns | grep v=spf1`
+       if [[ $SPF == *"v=spf1"* ]]; then
+            #Find domains with SPF and list them up if the line contains 'ip'.   
+            nslookup -type=txt $dns | grep v=spf1 | tr ' ' '\n'| grep 'ip'
+         
+            #Find included domain.
+            SPF_include=`nslookup -type=txt $dns | grep v=spf1 | tr ' ' '\n' | grep 'include' | cut -d ':' -f 2`
+       
+            #Find redirected domain
+            SPF_redirect=`nslookup -type=txt $dns | grep v=spf1 | tr ' ' '\n' | grep 'redirect' | cut -d '=' -f 3`  
+        
+            #Find allowed addresses recursice.  
+            for domain in $SPF_include;
+            do
+                find_txt_info $domain
+            done
+
+            for domain in $SPF_redirect;
+            do
+                find_txt_info $domain
+            done    
+       else 
+           echo "${red}Site does not have SPF records${reset}"
+       fi    
 }
 
 
-echo Starting script.....
-find_mx_info
-find_txt_info
-echo Ending script.....
-
-
-
+#RUNNING SQRIPT
+echo '' 
+echo "${blue}Starting script...${reset}"
+find_addresses $inputDomain
+echo ''
+find_mx_info $inputDomain
+echo ''
+echo "${green}Listing up allowed domains using SPF:${reset}"
+find_txt_info $inputDomain
+echo "${blue}Script finished...${reset}"
