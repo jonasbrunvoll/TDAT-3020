@@ -1,0 +1,9 @@
+# PROBLEM
+# The vulnerable point of the system is that the whole barcode 
+# is sent as an argument into the SQL sentence.
+# This is dangeruse because with the right barcode you could send 
+# actual commands which can edit the database table. NOT GOOD!
+
+# FIXED
+# Fixed the problem by ensuring that the data=b has to be an integer 
+# and only the data=b is sendt as an argument in the SQL-sentence. 

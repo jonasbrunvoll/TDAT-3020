@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="console.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
+    <script-file value="$APPLICATION_CONFIG_DIR$/consoles/db/9d8c0604-435b-40e3-9f02-5ad39603c6e9/console.sql" />
+    <script-mode>FILE</script-mode>
+    <data-source id="9d8c0604-435b-40e3-9f02-5ad39603c6e9" namespace="schema/&quot;jonasbl&quot;" />
+    <method v="2" />
+  </configuration>
+</component>
