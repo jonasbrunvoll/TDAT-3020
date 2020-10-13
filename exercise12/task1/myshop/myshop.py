@@ -3,10 +3,10 @@ import cv2
 from pyzbar.pyzbar import decode
 
 db = pymysql.connect(
-    host="xxx",
-    user="xxx",
-    passwd="xxx",
-    db="xxx")
+    host="mysql-ait.stud.idi.ntnu.no",
+    user="jonasbl",
+    passwd="kKjpnzGz",
+    db="jonasbl")
 
 # Method for scanning the five barcodes added.
 def scannBarcodes(num):
