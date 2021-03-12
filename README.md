@@ -2,7 +2,7 @@
 
 My exercises from the the subject Software and network security (TDAT-3020), autumn 2020. 
 
-* Exercise 1 : [Install linux and compilers] (https://github.com/jonasbrunvoll/TDAT-3020/tree/master/exercise1)
+* Exercise 1 : [Install linux and compilers](https://github.com/jonasbrunvoll/TDAT-3020/tree/master/exercise1)
 * Exercise 2 : [Bug fixing through stacktrace]()
 * Exercise 3 : [Sentral repository, diff, patch](https://github.com/jonasbrunvoll/TDAT-3020/tree/master/exercise3)
 * Exercise 4 : [C++, C, Rust, Assembly](https://github.com/jonasbrunvoll/TDAT-3020/tree/master/exercise4)
