@@ -4,10 +4,10 @@ My exercises from the the subject Software and network security (TDAT-3020), aut
 
 * Exercise 1 : [Install linux and compilers] (https://github.com/jonasbrunvoll/TDAT-3020/tree/master/exercise1)
 * Exercise 2 : [Bug fixing through stacktrace]()
-* Exercise 3 : [Sentral repository, diff, patch]()
-* Exercise 4 : [C++, C, Rust, Assembly]()
+* Exercise 3 : [Sentral repository, diff, patch](https://github.com/jonasbrunvoll/TDAT-3020/tree/master/exercise3)
+* Exercise 4 : [C++, C, Rust, Assembly](https://github.com/jonasbrunvoll/TDAT-3020/tree/master/exercise4)
 * Exercise 5 : [Shell scripting]()
-* Exercise 7 : [Switch, Router, VLAN]()
+* Exercise 7 : [Switch, Router, VLAN](https://github.com/jonasbrunvoll/TDAT-3020/tree/master/exercise7)
 * Exercise 8 : [Authentication, Tokens]()
 * Exercise 9 : [Firewalls]()
 * Exercise 10: [Capture the flag](https://github.com/jonasbrunvoll/TDAT-3020/tree/master/exercise10)
